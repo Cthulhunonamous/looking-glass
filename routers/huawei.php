@@ -36,10 +36,10 @@ class Huawei extends Router {
     $cmd->add('display');
 
     if (match_ipv6($parameter, false)) {
-      $cmd->add('ipv6');
+      $cmd->add('bgp ipv6');
     }
     if (match_ipv4($parameter, false)) {
-      $cmd->add('ip');
+      $cmd->add('bgp');
     }
     $parameter = str_replace('/', ' ', $parameter);
     $cmd->add('routing-table', $parameter);
